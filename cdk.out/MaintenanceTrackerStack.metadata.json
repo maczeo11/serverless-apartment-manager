@@ -1,0 +1,2653 @@
+{
+  "/MaintenanceTrackerStack": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaBreachTopic": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "topicName": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/RequestsTable": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "tableName": "*",
+        "partitionKey": {
+          "name": "*",
+          "type": "S"
+        },
+        "sortKey": {
+          "name": "*",
+          "type": "S"
+        },
+        "billingMode": "PAY_PER_REQUEST",
+        "timeToLiveAttribute": "*",
+        "removalPolicy": "destroy"
+      }
+    },
+    {
+      "type": "aws:cdk:hasPhysicalName",
+      "data": {
+        "Ref": "RequestsTable419243C7"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addGlobalSecondaryIndex": [
+          {
+            "indexName": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addGlobalSecondaryIndex": [
+          {
+            "indexName": "*"
+          }
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/UserPool": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "userPoolName": "*",
+        "selfSignUpEnabled": true,
+        "signInAliases": {
+          "email": true,
+          "username": false
+        },
+        "autoVerify": {
+          "email": true
+        }
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addTrigger": [
+          {},
+          "*"
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/ResidentsGroup": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ResidentsGroup"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:59:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/AdminsGroup": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AdminsGroup"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:60:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalClient": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "userPool": "*",
+        "userPoolClientName": "*",
+        "authFlows": {
+          "userSrp": true
+        }
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/CreateFn": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "environment": "*",
+        "entry": "*",
+        "handler": "*",
+        "code": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "environment": "*",
+        "entry": "*",
+        "handler": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/GetFn": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "environment": "*",
+        "entry": "*",
+        "handler": "*",
+        "code": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "environment": "*",
+        "entry": "*",
+        "handler": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/UpdateFn": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "environment": "*",
+        "entry": "*",
+        "handler": "*",
+        "code": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "environment": "*",
+        "entry": "*",
+        "handler": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaFn": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "environment": "*",
+        "entry": "*",
+        "handler": "*",
+        "code": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "environment": "*",
+        "entry": "*",
+        "handler": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/PostConfirmFn": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "environment": "*",
+        "entry": "*",
+        "handler": "*",
+        "code": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {}
+    },
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "runtime": "*",
+        "environment": "*",
+        "entry": "*",
+        "handler": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaRule": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "schedule": "*",
+        "targets": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addEventPattern": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addTarget": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "defaultCorsPreflightOptions": {
+          "allowOrigins": "*",
+          "allowMethods": "*"
+        }
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Auth": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "publicReadAccess": true,
+        "blockPublicAccess": "*",
+        "websiteIndexDocument": "*",
+        "websiteErrorDocument": "*",
+        "removalPolicy": "destroy",
+        "autoDeleteObjects": true
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+    {
+      "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+      "data": true
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "layers": [
+          "*"
+        ],
+        "environment": "*",
+        "timeout": "*",
+        "role": "*",
+        "memorySize": "*",
+        "ephemeralStorageSize": "*",
+        "vpc": "*",
+        "vpcSubnets": "*",
+        "securityGroups": "*",
+        "filesystem": "*",
+        "logGroup": "*",
+        "code": "*",
+        "handler": "*",
+        "runtime": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addEnvironment": [
+          "*",
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addLayers": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:is-custom-resource-handler-singleton",
+      "data": true
+    },
+    {
+      "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+      "data": 2
+    }
+  ],
+  "/MaintenanceTrackerStack/ApiUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiUrl"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:140:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PortalUrl"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:141:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/UserPoolId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UserPoolId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:142:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/ClientId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ClientId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:143:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals, @cspotcode\\source-map-support...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals, @cspotcode\\source-map-support...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaBreachTopic/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SlaBreachTopic8463747A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Topic2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:37:28)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaBreachTopic/you@example.com": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "topic": "*",
+        "endpoint": "*",
+        "protocol": "email",
+        "filterPolicy": "*",
+        "filterPolicyWithMessageBody": "*",
+        "deadLetterQueue": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/RequestsTable/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RequestsTable419243C7"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Table2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:41:27)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/RequestsTable/ScalingRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/UserPool/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UserPool6BA7E5F2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new UserPool2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:53:22)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/UserPool/PostConfirmationCognito": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UserPoolPostConfirmationCognito0E6001F8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.<anonymous> in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:84:14)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalClient/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PortalClient23FB8D7C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new UserPoolClient2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:62:28)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/CreateFn/ServiceRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "assumedBy": {
+          "principalAccount": "*",
+          "assumeRoleAction": "*"
+        },
+        "managedPolicies": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/CreateFn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CreateFn4C7D8E17"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:74:29)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/CreateFn/LogGroup": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "logGroupName": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/GetFn/ServiceRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "assumedBy": {
+          "principalAccount": "*",
+          "assumeRoleAction": "*"
+        },
+        "managedPolicies": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/GetFn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetFn67758DCD"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:75:27)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/GetFn/LogGroup": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "logGroupName": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/UpdateFn/ServiceRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "assumedBy": {
+          "principalAccount": "*",
+          "assumeRoleAction": "*"
+        },
+        "managedPolicies": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/UpdateFn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UpdateFn4B964873"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:76:29)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/UpdateFn/LogGroup": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "logGroupName": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaFn/ServiceRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "assumedBy": {
+          "principalAccount": "*",
+          "assumeRoleAction": "*"
+        },
+        "managedPolicies": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaFn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SlaFn47BBC7B5"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:77:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaFn/LogGroup": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "logGroupName": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/PostConfirmFn/ServiceRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "assumedBy": {
+          "principalAccount": "*",
+          "assumeRoleAction": "*"
+        },
+        "managedPolicies": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/PostConfirmFn/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PostConfirmFn06C759D2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:78:27)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PostConfirmFn/LogGroup": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "logGroupName": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaRule/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SlaRule6EF60AEA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Rule2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:95:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaRule/AllowEventRuleMaintenanceTrackerStackSlaFn9F2D0F9F": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SlaRuleAllowEventRuleMaintenanceTrackerStackSlaFn9F2D0F9F56050E31"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Rule2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:95:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiF70053CD"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:98:17)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Deployment": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "description": "*",
+        "api": "*",
+        "retainDeployments": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToLogicalId": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/DeploymentStage.prod": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "deployment": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Endpoint": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiEndpoint4F160690"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:98:17)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/Auth/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AuthC256A5EC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new CognitoUserPoolsAuthorizer2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:99:18)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalBucket/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PortalBucketF34416C0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Bucket2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:114:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketAutoDeleteObjects"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalBucket/Policy": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "bucket": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalBucket/AutoDeleteObjectsCustomResource": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Bucket2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:114:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Bucket2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:114:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalDeploy/AwsCliLayer": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {}
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalDeploy/CustomResourceHandler": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "uuid": "*",
+        "layers": [
+          "*"
+        ],
+        "environment": "*",
+        "lambdaPurpose": "*",
+        "timeout": "*",
+        "role": "*",
+        "memorySize": "*",
+        "ephemeralStorageSize": "*",
+        "vpc": "*",
+        "vpcSubnets": "*",
+        "securityGroups": "*",
+        "filesystem": "*",
+        "logGroup": "*",
+        "code": "*",
+        "handler": "*",
+        "runtime": "*"
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addMetadata": [
+          "*",
+          true
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addMetadata": [
+          "*",
+          "*"
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalDeploy/CustomResource-512MiB": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "assumedBy": {
+          "principalAccount": "*",
+          "assumeRoleAction": "*"
+        },
+        "managedPolicies": [
+          {
+            "managedPolicyArn": "*"
+          }
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachInlinePolicy": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB6723FB92"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new BucketDeployment2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:128:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/LogGroup": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "logGroupName": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals, @cspotcode\\source-map-support...",
+        "(no user code in 9007199254740991 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaBreachTopic/you@example.com/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SlaBreachTopicyouexamplecomDD98A01C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addSubscription in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:38:20)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/CreateFn/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CreateFnServiceRoleAB22C21C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:74:29)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/CreateFn/ServiceRole/DefaultPolicy": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/CreateFn/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/CreateFn/LogGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CreateFnLogGroupFB67099F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:74:29)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/GetFn/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetFnServiceRoleD6F724BE"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:75:27)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/GetFn/ServiceRole/DefaultPolicy": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/GetFn/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/GetFn/LogGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetFnLogGroup091411DC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:75:27)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/UpdateFn/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UpdateFnServiceRole47B28AB6"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:76:29)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/UpdateFn/ServiceRole/DefaultPolicy": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/UpdateFn/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/UpdateFn/LogGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UpdateFnLogGroup86A7E5CF"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:76:29)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaFn/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SlaFnServiceRole33BE0CB2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:77:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaFn/ServiceRole/DefaultPolicy": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaFn/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaFn/LogGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SlaFnLogGroup4A9D7B0C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:77:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PostConfirmFn/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PostConfirmFnServiceRoleF8CB9A31"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:78:27)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PostConfirmFn/ServiceRole/DefaultPolicy": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/PostConfirmFn/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/PostConfirmFn/LogGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PostConfirmFnLogGroup3C4DB3E6"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new NodejsFunction in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:78:27)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Deployment/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiDeploymentB17BE62D1c14604f5372e74fdf5030ff609880b9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:98:17)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/DeploymentStage.prod/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiDeploymentStageprod3EB9684E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:98:17)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/OPTIONS": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "authorizer": {
+            "authorizerId": "*",
+            "authorizationType": "*"
+          },
+          "apiKeyRequired": false,
+          "authorizationType": "*",
+          "methodResponses": [
+            {
+              "statusCode": "*",
+              "responseParameters": "*"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addMethodResponse": [
+          {
+            "statusCode": "*",
+            "responseParameters": "*"
+          }
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parent": "*",
+        "pathPart": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalBucket/Policy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PortalBucketPolicyAF0FA7F5"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Bucket2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:114:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    },
+    {
+      "type": "aws:cdk:analytics:mixin",
+      "data": {
+        "mixin": "aws-cdk-lib.aws_s3.mixins.BucketPolicyStatements"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalBucket/AutoDeleteObjectsCustomResource/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PortalBucketAutoDeleteObjectsCustomResourceBC251FA1"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Bucket2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:114:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalDeploy/AwsCliLayer/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PortalDeployAwsCliLayer23F5DA5A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new BucketDeployment2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:128:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalDeploy/Asset1/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalDeploy/CustomResource-512MiB/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PortalDeployCustomResource512MiB4D28380D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new BucketDeployment2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:128:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new BucketDeployment2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:128:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/DefaultPolicy": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "attachToRole": [
+          "*"
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/LogGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBLogGroup4F3F55A8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new BucketDeployment2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:128:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/CreateFn/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CreateFnServiceRoleDefaultPolicy655E1C8E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.grantReadWriteData in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:85:19)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/GetFn/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "GetFnServiceRoleDefaultPolicy2800A0B9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.grantReadData in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:86:19)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/UpdateFn/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "UpdateFnServiceRoleDefaultPolicy39CF5F23"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.grantReadWriteData in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:87:19)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/SlaFn/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SlaFnServiceRoleDefaultPolicy91518A1C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.grantReadData in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:88:19)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PostConfirmFn/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PostConfirmFnServiceRoleDefaultPolicy6718FDA3"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...NodejsFunction.addToRolePolicy in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:90:19)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiOPTIONS5886EA5D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new RestApi2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:98:17)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Apiapi0E601135"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...RootResource.addResource in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:102:30)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/OPTIONS": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "authorizer": {
+            "authorizerId": "*",
+            "authorizationType": "*"
+          },
+          "apiKeyRequired": false,
+          "authorizationType": "*",
+          "methodResponses": [
+            {
+              "statusCode": "*",
+              "responseParameters": "*"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addMethodResponse": [
+          {
+            "statusCode": "*",
+            "responseParameters": "*"
+          }
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parent": "*",
+        "pathPart": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalDeploy/AwsCliLayer/Code/AssetBucket": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": "*"
+    }
+  ],
+  "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleDefaultPolicy96C3E726"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\node_modules\\aws-cdk-lib\\aws-s3-deployment\\lib\\bucket-deployment.js:1:71 in aws-cdk-lib...",
+        "Array.map (:)",
+        "...new BucketDeployment2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:128:5)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapiOPTIONSC6F70CE1"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...RootResource.addResource in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:102:30)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsB3B7BF33"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addResource in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:103:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/OPTIONS": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "authorizer": {
+            "authorizerId": "*",
+            "authorizationType": "*"
+          },
+          "apiKeyRequired": false,
+          "authorizationType": "*",
+          "methodResponses": [
+            {
+              "statusCode": "*",
+              "responseParameters": "*"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addMethodResponse": [
+          {
+            "statusCode": "*",
+            "responseParameters": "*"
+          }
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/POST": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "authorizer": "*",
+          "authorizationType": "*"
+        }
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/GET": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "authorizer": "*",
+          "authorizationType": "*"
+        }
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parent": "*",
+        "pathPart": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsOPTIONS1633F363"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addResource in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:103:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/POST/ApiPermission.MaintenanceTrackerStackApiE44D915F.POST..api.requests": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsPOSTApiPermissionMaintenanceTrackerStackApiE44D915FPOSTapirequests96E82131"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:105:10)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/POST/ApiPermission.Test.MaintenanceTrackerStackApiE44D915F.POST..api.requests": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsPOSTApiPermissionTestMaintenanceTrackerStackApiE44D915FPOSTapirequests75379AC5"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:105:10)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/POST/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsPOST51C1CB9F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:105:10)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/GET/ApiPermission.MaintenanceTrackerStackApiE44D915F.GET..api.requests": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsGETApiPermissionMaintenanceTrackerStackApiE44D915FGETapirequestsA3E91DF6"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:106:10)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/GET/ApiPermission.Test.MaintenanceTrackerStackApiE44D915F.GET..api.requests": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsGETApiPermissionTestMaintenanceTrackerStackApiE44D915FGETapirequestsCEBE54AF"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:106:10)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/GET/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsGET089FA4AF"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:106:10)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "Apiapirequestsid42B5E050"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addResource in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:108:28)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/OPTIONS": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "authorizer": {
+            "authorizerId": "*",
+            "authorizationType": "*"
+          },
+          "apiKeyRequired": false,
+          "authorizationType": "*",
+          "methodResponses": [
+            {
+              "statusCode": "*",
+              "responseParameters": "*"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addMethodResponse": [
+          {
+            "statusCode": "*",
+            "responseParameters": "*"
+          }
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/GET": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "authorizer": "*",
+          "authorizationType": "*"
+        }
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/PUT": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "authorizer": "*",
+          "authorizationType": "*"
+        }
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/comments": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "parent": "*",
+        "pathPart": "*"
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidOPTIONS13305BFA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addResource in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:108:28)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/GET/ApiPermission.MaintenanceTrackerStackApiE44D915F.GET..api.requests.{id}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidGETApiPermissionMaintenanceTrackerStackApiE44D915FGETapirequestsidEB7A915D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:109:15)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/GET/ApiPermission.Test.MaintenanceTrackerStackApiE44D915F.GET..api.requests.{id}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidGETApiPermissionTestMaintenanceTrackerStackApiE44D915FGETapirequestsid85D04BC9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:109:15)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/GET/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidGETC42C71AF"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:109:15)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/PUT/ApiPermission.MaintenanceTrackerStackApiE44D915F.PUT..api.requests.{id}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidPUTApiPermissionMaintenanceTrackerStackApiE44D915FPUTapirequestsid5B0019D4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:110:15)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/PUT/ApiPermission.Test.MaintenanceTrackerStackApiE44D915F.PUT..api.requests.{id}": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidPUTApiPermissionTestMaintenanceTrackerStackApiE44D915FPUTapirequestsidE448670F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:110:15)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/PUT/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidPUTFB0AF557"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:110:15)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/comments/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidcommentsCBBE486B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addResource in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:111:15)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/comments/OPTIONS": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "authorizer": {
+            "authorizerId": "*",
+            "authorizationType": "*"
+          },
+          "apiKeyRequired": false,
+          "authorizationType": "*",
+          "methodResponses": [
+            {
+              "statusCode": "*",
+              "responseParameters": "*"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addMethodResponse": [
+          {
+            "statusCode": "*",
+            "responseParameters": "*"
+          }
+        ]
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/comments/POST": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "resource": "*",
+        "httpMethod": "*",
+        "integration": "*",
+        "options": {
+          "authorizer": "*",
+          "authorizationType": "*"
+        }
+      }
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/comments/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidcommentsOPTIONSBC75DFA3"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addResource in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:111:15)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/comments/POST/ApiPermission.MaintenanceTrackerStackApiE44D915F.POST..api.requests.{id}.comments": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidcommentsPOSTApiPermissionMaintenanceTrackerStackApiE44D915FPOSTapirequestsidcomments112D82D9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:111:39)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/comments/POST/ApiPermission.Test.MaintenanceTrackerStackApiE44D915F.POST..api.requests.{id}.comments": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidcommentsPOSTApiPermissionTestMaintenanceTrackerStackApiE44D915FPOSTapirequestsidcomments64C904F0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:111:39)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/Api/Default/api/requests/{id}/comments/POST/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiapirequestsidcommentsPOSTF98092A7"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...WrappedClass.addMethod in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:111:39)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ]
+}
