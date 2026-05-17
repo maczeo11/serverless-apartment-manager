@@ -334,7 +334,7 @@
    "Properties": {
     "Code": {
      "S3Bucket": "cdk-hnb659fds-assets-948645358124-us-east-1",
-     "S3Key": "e32bb125445450f743a9e18b123d7c98c5561bdccbb3616afcac454e365ba00a.zip"
+     "S3Key": "a5a0750966d09403ada03451347682fee6f4355a3603ad6529836cfffe19abe5.zip"
     },
     "Environment": {
      "Variables": {
@@ -351,7 +351,7 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs20.x"
+    "Runtime": "nodejs22.x"
    },
    "DependsOn": [
     "CreateFnServiceRoleDefaultPolicy655E1C8E",
@@ -359,7 +359,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "MaintenanceTrackerStack/CreateFn/Resource",
-    "aws:asset:path": "asset.e32bb125445450f743a9e18b123d7c98c5561bdccbb3616afcac454e365ba00a",
+    "aws:asset:path": "asset.a5a0750966d09403ada03451347682fee6f4355a3603ad6529836cfffe19abe5",
     "aws:asset:is-bundled": true,
     "aws:asset:property": "Code"
    }
@@ -479,7 +479,7 @@
    "Properties": {
     "Code": {
      "S3Bucket": "cdk-hnb659fds-assets-948645358124-us-east-1",
-     "S3Key": "84c19f3bc4499c6c87a09d4175fb30b782b16206b86fffaedd19957df190b00c.zip"
+     "S3Key": "0d9e488e5ce37885eb5adfa285a29205d2288847f6c815ff88b2c44684666491.zip"
     },
     "Environment": {
      "Variables": {
@@ -496,7 +496,7 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs20.x"
+    "Runtime": "nodejs22.x"
    },
    "DependsOn": [
     "GetFnServiceRoleDefaultPolicy2800A0B9",
@@ -504,7 +504,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "MaintenanceTrackerStack/GetFn/Resource",
-    "aws:asset:path": "asset.84c19f3bc4499c6c87a09d4175fb30b782b16206b86fffaedd19957df190b00c",
+    "aws:asset:path": "asset.0d9e488e5ce37885eb5adfa285a29205d2288847f6c815ff88b2c44684666491",
     "aws:asset:is-bundled": true,
     "aws:asset:property": "Code"
    }
@@ -628,7 +628,7 @@
    "Properties": {
     "Code": {
      "S3Bucket": "cdk-hnb659fds-assets-948645358124-us-east-1",
-     "S3Key": "7e1343afe68d842babc377e65641156ee4aed96c881471e69319d1863b72b7ff.zip"
+     "S3Key": "c96d67db62a904254e2551d01c2101837c97935c99acd2378e4730002a47048c.zip"
     },
     "Environment": {
      "Variables": {
@@ -645,7 +645,7 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs20.x"
+    "Runtime": "nodejs22.x"
    },
    "DependsOn": [
     "UpdateFnServiceRoleDefaultPolicy39CF5F23",
@@ -653,7 +653,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "MaintenanceTrackerStack/UpdateFn/Resource",
-    "aws:asset:path": "asset.7e1343afe68d842babc377e65641156ee4aed96c881471e69319d1863b72b7ff",
+    "aws:asset:path": "asset.c96d67db62a904254e2551d01c2101837c97935c99acd2378e4730002a47048c",
     "aws:asset:is-bundled": true,
     "aws:asset:property": "Code"
    }
@@ -720,6 +720,13 @@
     "PolicyDocument": {
      "Statement": [
       {
+       "Action": "sns:Publish",
+       "Effect": "Allow",
+       "Resource": {
+        "Ref": "SlaBreachTopic8463747A"
+       }
+      },
+      {
        "Action": [
         "dynamodb:BatchGetItem",
         "dynamodb:ConditionCheckItem",
@@ -773,14 +780,17 @@
    "Properties": {
     "Code": {
      "S3Bucket": "cdk-hnb659fds-assets-948645358124-us-east-1",
-     "S3Key": "ba3da633d3da5338325a2912fe19b2f8ef90de0cbc4dd58edc86361d662c5a20.zip"
+     "S3Key": "d2d3427522bdd525b256033763363c6983dd23514632078aa7d1538e3a431db1.zip"
     },
     "Environment": {
      "Variables": {
       "TABLE_NAME": {
        "Ref": "RequestsTable419243C7"
       },
-      "SLA_HOURS_JSON": "{\"EMERGENCY\":4,\"HIGH\":24,\"MEDIUM\":48,\"LOW\":168}"
+      "SLA_HOURS_JSON": "{\"EMERGENCY\":4,\"HIGH\":24,\"MEDIUM\":48,\"LOW\":168}",
+      "SNS_TOPIC_ARN": {
+       "Ref": "SlaBreachTopic8463747A"
+      }
      }
     },
     "Handler": "index.handler",
@@ -790,7 +800,7 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs20.x"
+    "Runtime": "nodejs22.x"
    },
    "DependsOn": [
     "SlaFnServiceRoleDefaultPolicy91518A1C",
@@ -798,7 +808,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "MaintenanceTrackerStack/SlaFn/Resource",
-    "aws:asset:path": "asset.ba3da633d3da5338325a2912fe19b2f8ef90de0cbc4dd58edc86361d662c5a20",
+    "aws:asset:path": "asset.d2d3427522bdd525b256033763363c6983dd23514632078aa7d1538e3a431db1",
     "aws:asset:is-bundled": true,
     "aws:asset:property": "Code"
    }
@@ -888,7 +898,7 @@
    "Properties": {
     "Code": {
      "S3Bucket": "cdk-hnb659fds-assets-948645358124-us-east-1",
-     "S3Key": "243ead668f63b7c690b9c725597b9b1aeef4af2691e0cfca9fb36be1651266c0.zip"
+     "S3Key": "06b1b9ef234586c5b8701213e44b15fdf423a6d6634987094ec3aa5ad7d7d9af.zip"
     },
     "Environment": {
      "Variables": {
@@ -905,7 +915,7 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs20.x"
+    "Runtime": "nodejs22.x"
    },
    "DependsOn": [
     "PostConfirmFnServiceRoleDefaultPolicy6718FDA3",
@@ -913,7 +923,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "MaintenanceTrackerStack/PostConfirmFn/Resource",
-    "aws:asset:path": "asset.243ead668f63b7c690b9c725597b9b1aeef4af2691e0cfca9fb36be1651266c0",
+    "aws:asset:path": "asset.06b1b9ef234586c5b8701213e44b15fdf423a6d6634987094ec3aa5ad7d7d9af",
     "aws:asset:is-bundled": true,
     "aws:asset:property": "Code"
    }
@@ -1845,7 +1855,7 @@
       "Value": "true"
      },
      {
-      "Key": "aws-cdk:cr-owned:59d6a9ba",
+      "Key": "aws-cdk:cr-owned:e4a4eb22",
       "Value": "true"
      }
     ],
@@ -2038,12 +2048,12 @@
     "aws:asset:property": "Content"
    }
   },
-  "PortalDeployCustomResource512MiB4D28380D": {
+  "PortalDeployCustomResource8E857534": {
    "Type": "Custom::CDKBucketDeployment",
    "Properties": {
     "ServiceToken": {
      "Fn::GetAtt": [
-      "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB6723FB92",
+      "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536",
       "Arn"
      ]
     },
@@ -2063,10 +2073,10 @@
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
    "Metadata": {
-    "aws:cdk:path": "MaintenanceTrackerStack/PortalDeploy/CustomResource-512MiB/Default"
+    "aws:cdk:path": "MaintenanceTrackerStack/PortalDeploy/CustomResource/Default"
    }
   },
-  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1": {
+  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265": {
    "Type": "AWS::IAM::Role",
    "Properties": {
     "AssumeRolePolicyDocument": {
@@ -2097,10 +2107,10 @@
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/Resource"
+    "aws:cdk:path": "MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource"
    }
   },
-  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleDefaultPolicy96C3E726": {
+  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF": {
    "Type": "AWS::IAM::Policy",
    "Properties": {
     "PolicyDocument": {
@@ -2157,18 +2167,18 @@
      ],
      "Version": "2012-10-17"
     },
-    "PolicyName": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleDefaultPolicy96C3E726",
+    "PolicyName": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
     "Roles": [
      {
-      "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1"
+      "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource"
    }
   },
-  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB6723FB92": {
+  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536": {
    "Type": "AWS::Lambda::Function",
    "Properties": {
     "Code": {
@@ -2186,10 +2196,9 @@
       "Ref": "PortalDeployAwsCliLayer23F5DA5A"
      }
     ],
-    "MemorySize": 512,
     "Role": {
      "Fn::GetAtt": [
-      "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1",
+      "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
       "Arn"
      ]
     },
@@ -2197,17 +2206,17 @@
     "Timeout": 900
    },
    "DependsOn": [
-    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleDefaultPolicy96C3E726",
-    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1"
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
    ],
    "Metadata": {
-    "aws:cdk:path": "MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Resource",
+    "aws:cdk:path": "MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource",
     "aws:asset:path": "asset.3423a042b818e31c1e34a19d6689ab2e5f9b70fcbe9e71df66f241b20a200bd9",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
   },
-  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBLogGroup4F3F55A8": {
+  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CLogGroup817B64E9": {
    "Type": "AWS::Logs::LogGroup",
    "Properties": {
     "LogGroupName": {
@@ -2216,7 +2225,7 @@
       [
        "/aws/lambda/",
        {
-        "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB6723FB92"
+        "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
        }
       ]
      ]
@@ -2226,13 +2235,13 @@
    "UpdateReplacePolicy": "Retain",
    "DeletionPolicy": "Retain",
    "Metadata": {
-    "aws:cdk:path": "MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/LogGroup/Resource"
+    "aws:cdk:path": "MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/LogGroup/Resource"
    }
   },
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/+1ZUW/bNhD+LeNjwWpru77kzXHTImjSuLbbYTCCgBbPMhOK1MijXVXQfx9IirKcJtm6oUWzGbAh6u54/O54lO5Oz7PnL19kz35iW/s05zdPpVhmzQxZfkPZ1l41VtmsmetK5IuGoL++YyWQI/KEtJd0vFKBR2duaXMjKhRaJcEgRAkoXmmhsLutjEada0mOCJRMSELJSkgEM9FS5HUnNST9JnB9DtayAo41TxIcGD8DRDDvHbghoiGWlvJasVLzZdbM2VKCB+evvRWUVMyg8MJvoSZHDVE7FtaVH85IS4nVBh+WWAophSrONfekyej3q8nJ9Gp68v7DyWzuZUUJc30mNjBCNGLpMGkxUOoNk70LOFg0uiYtbQjj/I3USyZnkGvFmalPFYdP5GjREOFHgw35avm4hd4hLc11oQTqrPlgveu1XDTEdcOBuyzI1UwU6kN1ovxETo7QOKDEikKdqpEUzIL1bor723G9pui3FZMWWkqYQ/0RjFjVt4Tbzoy5EUUBxiNvKXlCOrgJ3nD8xmhX0XQ3lgIUDuB30N0ef2ATc7h+LfU2wPZSM1MlLHtrxpktlaxccpY145WagCmFtUIrL/jaqRy78RmrwXwEE3gzoQoJqHsJD88J3iGQXtaSo4W30x+ajTBaldCfm7jixJlK2z74RAnaJQmjZWKUUGpTz8TnRIBqDSUYJmeoDStgwNpU+W40c0sFaPutzp0RWAfv2t3RBFtbhDIh00UQ6G7zGP5+uGaKS7+BEZ9THnAMvbjD54CMM2TRbuodfnk3q9v+gfP+0mOP3jsnQ5N2XojMs6H5/uTHALlSmsO1zd6Fy8BdQ/13eQsUmvpOZD3kljbx94+V/Zu5ByD/EyCXVLAya6Y6vK2Zta4EfhxeEpURKhcVk6M8165XFWX8hFEI9w4JKZliBfDwWhX+nbRo9mj1yKj9N+dcT9IS6WW8aDouIsvXp0oKBT2vP5APMh/WezDwYODBwG9t4H/AhPv1hhzVA6eRHJKFpG6upyH3ubXKl2TOZ8gQ/DPaDgDfRT7o/076vzHQEDgxZlpqX1w1zFpAm438hXKopK69fHbs8hvAVz3BS2dNpB4zCyk9ve9/SaPsoiGVW0qRT4HxUZ6DtalCXEqd30wCMzHC5C0srUAIVewrnbtBDtGxTozR5hbrvpI61p2vQALCxfIacuwARF/0KEvxSfhTPWyM+I6IfZEFlu1cMvpCW5ts7c5iQ5bhdtCiuMX/u2vFCYNNDHm/LmzWnHVlhi+MuuGuzqffixiMS1BaChuPMmumLqRyNl8Dd30ZhswUqZpKFY+fMGG+q6NuPfmC8N7jzvmmBatEwRC2rM6aKVgcVWLREA4r5iSOtbETAyspijVehIZQqPCZlHp7YUQhVAqyQDoHXGveIepWiTrpLvKD+r7BlKZXoo87ZELtxPfsm+szXYicyVO+dy4P9MdCD0Gx2106Q1ZACIlEGnYiPZNOwWpnckiPyUsa48wX5R0rlUGIVeR1BKEQCsMGgaYHUexwrY347Oum4d1pmp1IYf48NipDQsMq8RbqKfzhhPH9u9CRu0/e90s8pCnYSivb5T8WGTo73nUzTMeeMMNKwNCbiCnRrqEz0PK1SujBWQdn/fDOesg5j3Ohw/b/iLty2P5Ht/0hIYh6+4zAF0PM7GqWiuF6wgz2KeM34qbMNoCg4/jdL33isqPepJitjFdqR2rbHfrADZWiT3SEKrzohcPKIR07i7ocitKkbLfwnszE6I3gYHyalD5mhG88V2xrcymy0daOpQjfPWKK5j91ZNf2583zX7NnL7Nffrq2Qjzt+s7ZNF7/BDpIKxbhHgAA"
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/+1ZUW/bOAz+LdPjoPlu2+2lb2nWDcXaNUvSHQ5BUSgW46iVJZ9ENfMM//eDJMtxurW37bBDOwRoYZmkqI8UFZH0i+zFq5fZ8ydsY5/l/PqZFMusmSHLrynb2MvGKps1c12JfNEQ9M/3rARyQJ6S9oKOVyrw6MwtbW5EhUKrJBiEKAHFKy0Udq+V0ahzLckBgZIJSShZCYlgJlqKvO6khqQ/Ba5PwVpWwKHmSYID4yeACOaDAzdENMTSUl4rVmq+zJo5W0rw4Pyzt4KSihkUXvgd1OSgIWrLwrrywxlpKbHa4P0SSyGlUMWp5p40Gf11OTmaXk6PPpwfzeZeVpQw1yfiBkaIRiwdJi0GSn3DZO8CDhaNrklLG8I4fyv1kskZ5FpxZupjxeETOVg0RPjRYEO+Wz5uoXdIS3NdKIE6a86td72Wi4a4bjhwlwW5molCnVdHyk/k5ACNA0qsKNSxGknBLFjvpri/Hddrin5bMWmhpYQ51B/BiFV9S7jtzJgbURRgPPKWkqekg5vgDcdvjXYVTW9jKUDhAH4H3e3wBzYxh+s3Um8CbC81M1XCsrNmnNlSycolZ1kzXqkJmFJYK7Tygm+cyrEbn7AazEcwgTcTqpCAupfw8JzgHQLpZS05WHg7/aG5EUarEvpzE1ecOFNp2wefKEG7JGG0TIwSSm3qmficCFCtoQTD5Ay1YQUMWDdVvh3N3FIB2n6rc2cE1sG7dns0wdYWoUzIdBEEutc8hr8frpni0m9gxOeUBxxDL+7wKSDjDFm0m3qHX3yd1W3/wHn/6rFH752joUlbL0TmydB8f/JjgFwqzeHKZu/DY+Cuof6veQsUmvqryHrILW3i3w8r+y9z90C+BchDwvLjQC6oYGXWTHW4sJm1rgR+GO6JygiVi4rJUZ5r16uKMn7CKER8h4SUTLECeLhZhb+WFs0OrR4ZtXt5zvUkLZHu40XTcRFZvj5WUijoef2ZvJd5v969gXsDH7iBv7z5v4AJd+sNSawHTiM5ZBNJ3VxPQ3J0a5UvyZzPkCH4X3C7Expfkvf679f/s5f9yfhDPMVQaql9edkwawFtNvIPyqGSuvby2aHLrwFf9wQvnTWResgspLT2rv8LGmUXDancUop8CoyP8hysTZXlUur8ehKYiREmb2BpBUKofl/r3A0Sj451ZIw2t1h3leKxXn0NEhDOlleQYwcg+qJHWYpPwh/2YUPFd1LsyyywbOeS0Rfa2mRrd0Qbsgyvg9bGLf63rhUnDDYx1Au6sFlz0pUnvqDqhtv+AP2/iMG4BKWlcONRZs3UhfzP5mvgri/fkJkiVWGpUvITJsx3g9StH8QgvPMr6Hyzg1WiYAgbVmfNFCyOKrFoCIcVcxLH2tiJgZUUxRrPQiMpdAaYlHpzZkQhVAqyQDoFXGveIepWiTrpNvKD+r4xlaZXoo87ZEJtxXfsm+sTXYicyWN+60re0x8HPQTFdnfpDFkBISQSadjB9Ew6BaudySH9TF7QGGe+mO9YqXZCrCKvIwiFUBg2CDQ9iGKHa23EZ19sDd+O0+xECvPnscEZ8hxWiXdQT+FvJ4zv+4VO3l3yvs/iIU3BVlrZLi2yyNDZ8bYLYjr2hBlWAoaeRsyUto2ggZbvVUL3zto768E76z7nPM6F9tv/EHdlv/2PbvtDQhD19hmBL4aY2dYsFcP1hBnsU8afxE2ZbQBBx/F7Yfo0Zke9STFbGa/UltS2W/SBGypFn+gIVXjRM4eVQzp2FnU5FKVJ2XbhHZmJ0TeCg/FpUvoIEr4NXbKNzaXIRhs7liJ8L4kpmv9Ekl3Z325e/JE9f5X9/uTKCvGsa1Zn0/j8B3S/SCAZHwAA"
    },
    "Metadata": {
     "aws:cdk:path": "MaintenanceTrackerStack/CDKMetadata/Default"
@@ -2297,7 +2306,7 @@
     "Ref": "UserPool6BA7E5F2"
    }
   },
-  "ClientId": {
+  "UserPoolClientId": {
    "Value": {
     "Ref": "PortalClient23FB8D7C"
    }

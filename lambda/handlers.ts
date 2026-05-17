@@ -3,6 +3,7 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocumentClient, PutCommand, GetCommand, QueryCommand, UpdateCommand } from "@aws-sdk/lib-dynamodb";
 import { CognitoIdentityProviderClient, AdminAddUserToGroupCommand } from "@aws-sdk/client-cognito-identity-provider";
+import { SNSClient, PublishCommand } from "@aws-sdk/client-sns";
 import { randomUUID } from "crypto";
 
 const SLA_HOURS: Record<string, number> = JSON.parse(
@@ -12,6 +13,7 @@ const SLA_HOURS: Record<string, number> = JSON.parse(
 const ddbClient = new DynamoDBClient({});
 const ddb = DynamoDBDocumentClient.from(ddbClient, { marshallOptions: { removeUndefinedValues: true } });
 const cognitoClient = new CognitoIdentityProviderClient({});
+const snsClient = new SNSClient({});
 
 const TABLE = process.env.TABLE_NAME!;
 
@@ -216,7 +218,21 @@ export const slaCheckerHandler = async () => {
             lastKey = result.LastEvaluatedKey as typeof lastKey;
         } while (lastKey);
     }
-    return { breachCount: totalBreaches };
+
+    if (totalBreaches > 0 && process.env.SNS_TOPIC_ARN) {
+        const summary = Object.entries(breachesByPriority)
+            .filter(([, count]) => count > 0)
+            .map(([priority, count]) => `  ${priority}: ${count}`)
+            .join("\n");
+
+        await snsClient.send(new PublishCommand({
+            TopicArn: process.env.SNS_TOPIC_ARN,
+            Subject: `⚠️ SLA Breach Alert: ${totalBreaches} overdue request(s)`,
+            Message: `SLA Breach Report — ${now}\n\nTotal breached requests: ${totalBreaches}\n\nBy priority:\n${summary}`,
+        }));
+    }
+
+    return { breachCount: totalBreaches, breachesByPriority };
 };
 
 // ═════════════════════════════════════════════════════════════════════════════

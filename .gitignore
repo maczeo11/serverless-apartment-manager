@@ -8,6 +8,7 @@ yarn-error.log*
 /.pnp
 .pnp.js
 
-.vscode/*cdk.out
+.vscode/*
+cdk.out
 portal/node_modules
 portal/dist
