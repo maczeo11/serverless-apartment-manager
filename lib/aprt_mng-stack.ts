@@ -15,8 +15,7 @@ import * as eventsTargets from 'aws-cdk-lib/aws-events-targets';
 
 import * as iam from 'aws-cdk-lib/aws-iam';
 
-import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
-import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
+
 import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
 import * as fs from 'fs';
@@ -293,56 +292,23 @@ export class MaintenanceTrackerStack extends cdk.Stack {
     );
 
     const portalBucket = new s3.Bucket(this, 'PortalBucket', {
-      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
       autoDeleteObjects: true,
+      websiteIndexDocument: 'index.html',
+      websiteErrorDocument: 'index.html',
+      publicReadAccess: true,
+      blockPublicAccess: new s3.BlockPublicAccess({
+        blockPublicAcls: true,
+        ignorePublicAcls: true,
+        blockPublicPolicy: false,
+        restrictPublicBuckets: false,
+      }),
     });
 
-    const distribution = new cloudfront.Distribution(this, 'PortalDistribution', {
-      defaultBehavior: {
-        origin: origins.S3BucketOrigin.withOriginAccessControl(portalBucket),
-        viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
-      },
-      defaultRootObject: 'index.html',
-      errorResponses: [
-        {
-          httpStatus: 403,
-          responseHttpStatus: 200,
-          responsePagePath: '/index.html',
-        },
-        {
-          httpStatus: 404,
-          responseHttpStatus: 200,
-          responsePagePath: '/index.html',
-        }
-      ]
-    });
-
+    // 4. Deploy Portal to S3
     new s3deploy.BucketDeployment(this, 'PortalDeploy', {
-      sources: [
-        s3deploy.Source.asset(join(__dirname, '../portal'), {
-          bundling: {
-            image: cdk.DockerImage.fromRegistry('node:22'),
-            local: {
-              tryBundle(outputDir: string) {
-                try {
-                  const portalDir = join(__dirname, '../portal');
-                  const { execSync } = require('child_process');
-                  execSync('npm install', { cwd: portalDir, stdio: 'ignore' });
-                  execSync('npm run build', { cwd: portalDir, stdio: 'ignore' });
-                  fs.cpSync(join(portalDir, 'dist'), outputDir, { recursive: true });
-                  return true;
-                } catch (e) {
-                  return false;
-                }
-              }
-            }
-          }
-        })
-      ],
+      sources: [s3deploy.Source.asset('./portal/dist')],
       destinationBucket: portalBucket,
-      distribution,
-      distributionPaths: ['/*'],
     });
 
     // Assign public properties
@@ -357,7 +323,7 @@ export class MaintenanceTrackerStack extends cdk.Stack {
     });
 
     new cdk.CfnOutput(this, 'PortalUrl', {
-      value: `https://${distribution.domainName}`,
+      value: portalBucket.bucketWebsiteUrl,
     });
 
     new cdk.CfnOutput(this, 'UserPoolId', {

@@ -871,9 +871,19 @@
        "Action": "cognito-idp:AdminAddUserToGroup",
        "Effect": "Allow",
        "Resource": {
-        "Fn::GetAtt": [
-         "UserPool6BA7E5F2",
-         "Arn"
+        "Fn::Join": [
+         "",
+         [
+          "arn:aws:cognito-idp:",
+          {
+           "Ref": "AWS::Region"
+          },
+          ":",
+          {
+           "Ref": "AWS::AccountId"
+          },
+          ":userpool/*"
+         ]
         ]
        }
       }
@@ -1843,9 +1853,9 @@
    "Properties": {
     "PublicAccessBlockConfiguration": {
      "BlockPublicAcls": true,
-     "BlockPublicPolicy": true,
+     "BlockPublicPolicy": false,
      "IgnorePublicAcls": true,
-     "RestrictPublicBuckets": true
+     "RestrictPublicBuckets": false
     },
     "Tags": [
      {
@@ -1856,7 +1866,11 @@
       "Key": "aws-cdk:cr-owned:e4a4eb22",
       "Value": "true"
      }
-    ]
+    ],
+    "WebsiteConfiguration": {
+     "ErrorDocument": "index.html",
+     "IndexDocument": "index.html"
+    }
    },
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete",
@@ -1872,6 +1886,27 @@
     },
     "PolicyDocument": {
      "Statement": [
+      {
+       "Action": "s3:GetObject",
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": "*"
+       },
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "PortalBucketF34416C0",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       }
+      },
       {
        "Action": [
         "s3:DeleteObject*",
@@ -1910,32 +1945,6 @@
          ]
         }
        ]
-      },
-      {
-       "Action": "s3:GetObject",
-       "Effect": "Allow",
-       "Principal": {
-        "CanonicalUser": {
-         "Fn::GetAtt": [
-          "PortalDistributionOrigin1S3Origin0D94F3EC",
-          "S3CanonicalUserId"
-         ]
-        }
-       },
-       "Resource": {
-        "Fn::Join": [
-         "",
-         [
-          {
-           "Fn::GetAtt": [
-            "PortalBucketF34416C0",
-            "Arn"
-           ]
-          },
-          "/*"
-         ]
-        ]
-       }
       }
      ],
      "Version": "2012-10-17"
@@ -2031,73 +2040,6 @@
     "aws:asset:property": "Code"
    }
   },
-  "PortalDistributionOrigin1S3Origin0D94F3EC": {
-   "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
-   "Properties": {
-    "CloudFrontOriginAccessIdentityConfig": {
-     "Comment": "Identity for MaintenanceTrackerStackPortalDistributionOrigin1C0528718"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "MaintenanceTrackerStack/PortalDistribution/Origin1/S3Origin/Resource"
-   }
-  },
-  "PortalDistribution104A9AF0": {
-   "Type": "AWS::CloudFront::Distribution",
-   "Properties": {
-    "DistributionConfig": {
-     "CustomErrorResponses": [
-      {
-       "ErrorCode": 403,
-       "ResponseCode": 200,
-       "ResponsePagePath": "/index.html"
-      },
-      {
-       "ErrorCode": 404,
-       "ResponseCode": 200,
-       "ResponsePagePath": "/index.html"
-      }
-     ],
-     "DefaultCacheBehavior": {
-      "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
-      "Compress": true,
-      "TargetOriginId": "MaintenanceTrackerStackPortalDistributionOrigin1C0528718",
-      "ViewerProtocolPolicy": "redirect-to-https"
-     },
-     "DefaultRootObject": "index.html",
-     "Enabled": true,
-     "HttpVersion": "http2",
-     "IPV6Enabled": true,
-     "Origins": [
-      {
-       "DomainName": {
-        "Fn::GetAtt": [
-         "PortalBucketF34416C0",
-         "RegionalDomainName"
-        ]
-       },
-       "Id": "MaintenanceTrackerStackPortalDistributionOrigin1C0528718",
-       "S3OriginConfig": {
-        "OriginAccessIdentity": {
-         "Fn::Join": [
-          "",
-          [
-           "origin-access-identity/cloudfront/",
-           {
-            "Ref": "PortalDistributionOrigin1S3Origin0D94F3EC"
-           }
-          ]
-         ]
-        }
-       }
-      }
-     ]
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "MaintenanceTrackerStack/PortalDistribution/Resource"
-   }
-  },
   "PortalDeployAwsCliLayer23F5DA5A": {
    "Type": "AWS::Lambda::LayerVersion",
    "Properties": {
@@ -2127,19 +2069,13 @@
      "cdk-hnb659fds-assets-948645358124-us-east-1"
     ],
     "SourceObjectKeys": [
-     "e7a9a5f434476142ab6487a17b925e1ee0178fb3567d084752e9f83dc6def659.zip"
+     "c8a2412b0788bfb6a0422e00ca538836a3fc4610b28081636c01f6e48ecf38f9.zip"
     ],
     "DestinationBucketName": {
      "Ref": "PortalBucketF34416C0"
     },
     "WaitForDistributionInvalidation": true,
     "Prune": true,
-    "DistributionId": {
-     "Ref": "PortalDistribution104A9AF0"
-    },
-    "DistributionPaths": [
-     "/*"
-    ],
     "OutputObjectKeys": true
    },
    "UpdateReplacePolicy": "Delete",
@@ -2235,14 +2171,6 @@
          ]
         }
        ]
-      },
-      {
-       "Action": [
-        "cloudfront:CreateInvalidation",
-        "cloudfront:GetInvalidation"
-       ],
-       "Effect": "Allow",
-       "Resource": "*"
       }
      ],
      "Version": "2012-10-17"
@@ -2321,7 +2249,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/+1ZbW/bNhD+LdXHgtHWdv2Sb46bdkGTRrWdDoMRBLR4lplQpEYe7aqC/vtAUpTlNMn6sm5NECCBpbvj8bkXSXfH5+nzly/SZ0/oxuzl7GpP8EXaTJHmV4RuzEVjpEmbmap4Pm8SdL/vaAnJfvI0ac/JeCk9j0ztwuSaV8iVjIJeiCQgWaW4xO620gpVrkSyn0BJuUhIsuQCQWdK8LzupIakPziuTsAYWsCBYlGCAWXHgAj6vQU7RDTE0hJWS1oqtkibGV0IcODcb28FSSqqkTvht1An+00ityysK3c5TVqSGKXxbokFF4LL4kQxR8pGf15kh5OLyeH7s8PpzMnyEmbqmK9hhKj5wmLUoqFUayp6FzAwqFWdtKRJKGNvhFpQMYVcSUZ1fSQZfEz2503C3dUgIF8tH0LoHNKSXBWSo0qbM+Ncr8S8SWx3OXCXAbGc8kKeVYfSLWTJPmoLJDG8kEdyJDg1YJybQnw7rtMU/LakwkBLEmpRfQDNl/U14bYzY6Z5UYB2yFuSPE06uBHe8PqNVrYi8W4sOEgcwO+g2x3+wCZqcfVaqI2H7aSmuopYdvYMK1siaLlgNG3GS5mBLrkxXEkn+NrKHLvrY1qD/gDa86ZcFgJQ9RIOnuWsQyCcrEn2585O99CsuVayhP65CTtmVlfK9MnHS1A2SmglIqOEUul6yj9FAlQrKEFTMUWlaQED1rrKt1dTu5CApg91bjXH2nvXbB9NMLVBKCMyVXiB7jYP6e8uV1Qy4QIY8FnpAIfUCxE+AaSMIg12E+fw85tZXfgHzvtHj9177xwOTdp6ITCPh+a7Jz8kyIVUDC5N+s7/DNw11H+Tt0Cirm9E1kNuSRP+vlnZ96x9BPIlQH4mLN8O5JxwWqbNRPkPNjXGlsAO/Hei0lzmvKJilOfK9qqCjFsw8hnfIUlKKmkBzH9ZufsszZsdWj3ScvfjOVNZ3CJ+j+dNx0Wk+epICi6h5/XP5J3MB2DC3XofDbzvBj548x+ACd8aQV/EOrNIIPtqIm42UxNfHF3D8DmZsSlSBPcGN3Hbf03RA9X/o7f9f/D7fAqp1BLz4qKhxgCadOR+CINKqNrJpwc2vwJ81ROcdNoE6gE1EMva2/7PSZCdN8lCqPwqswvB81Geg4kl923Nc+gwX4EAhNPFJeQOve/pPPpeb8k/cvfwDkcgbvZhXqSeZTojRp9payO67qFqkoW/HQwjrvG/dK+wYOB2X+GrwqTNcddQuBaou9x29OS/InrjIpSWwNqhTJuJ9RWbyVfAbN9wIdVF7Jtib+MWZNTNb+S1F5wX3nlvWTeeoBUvKMKG1mkzAYOjis+bhMGSWoFjpU2mYSl4scJTP/rxvTwVQm1ONS+4jOniSSeAK8U6RN0uQSfZ5qpX34+S4vKK93mHlMut+I59M3WsCp5TccSuvaAf6feD7pNiG10yRVqAT4lIGs4cHZNMwCirc4gvtnMS8sy13x0rdjuIVeB1BC4RCk0HiaYGWWxxpTT/5Nqj4d1RXB1Jfv0sjCR93UIr/hbqCfxluXaTOj97u03eTUYcpAmYSknTlTkGKVoz3s4tdMfOqKYloJ9ChMpnO7oZaPlaJeTRWY/O+umddZdz7udGj+H/GaPyGP57F35fEAS9fUUwb9wx43byWVFcZVRjXzL+IG6sbD0IMg4nfPEwy4x6k0K1Ml7KLakluVCWLbWSmDavuAlHluE0oSu7D2BF11z59FG+yu5QrDlsQGfdWW/fmmlgXEOOe6j2nPeNy6VO10QpDI1VnA5rrfRuzrg1Ux/ya+H+/TZGRgvIKK56Z32vClcYhoYiNKFHDCRyrF3N6Bw4dk577Zx2k5SvKQeubNttivgQ+AbaVZNcFk741GJlkYytQVUORUmM2Da6OzKZVmvOQLtaNJ4N+SOzC7oxueDpaGPGgvtjpFAHu5Oj9NL8sn7+W/rsZfrrk0vD+V43w08n4fdv+AeryTAgAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/+1ZUW/bOAz+LfPjoPlu2+2lb2nWDcXaNUuyHQ5BUSgW47CVJZ9ENfOM/PdBkuW43drbdrfDWhRIYJmkqI+UZJHUs/zZi+f500d8Y58U4uKJxGXezogXF4xv7Flrlc3bua6xWLQZ+edbXkG2lz3OtqdsvFKBx2ZuaQuDNaFWSTAIsQyUqDUq6l5ro0kXWmZ7GVQcZcayFUoCM9ESi6aTGpL+RFofg7W8hH0tkoQALo6ACMw7B26IaIhly0SjeKXFMm/nfCnBg/PP3gqW1dwQeuE30GR7baZ2LGpq35xlW5ZZbeh2iSVKiao81sKTJqO/ziYH07Ppwbv3B7O5l8UK5voIL2FEZHDpKGkxUOlLLnsXCLBkdJNtWZtxIV5LveRyBoVWgpvmUAn4mO0t2gx9azAh3y0fp9A7ZMsKXSoknbfvrXe9los2c11z4C4LcjXDUr2vD5TvKLI9Mg5YZrFUh2okkVuw3k1xfjuu1xT9tuLSwpZl3JH+AAZXzTXhbWfG3GBZgvHItyx7nHVwE7xh+7XRrmbpbSwRFA3gd9DdFf7AJu5o/UrqTYDtpWamTliujBl7bpnk1VLwvB2v1ARMhdaiVl7wlVMFde0j3oD5ACbwZqhKCaR7CQ/PoegQSC9rs72Ft9Nvmks0WlXQ75s44sSZWtt+8WEF2iUJo2ViVFBp08zwUyJAvYYKDJcz0oaXMGBd1sWuNXNLBWT7qS6cQWqCd+1ua4JtLEGVkOkyCHSvRVz+vrnmSkg/gRGfUx5wXHpxho+BuODEo93MO/z066xu+gfO+0eP3XnvHAxN2nkhMo+G5vudHxfImdICzm3+NjwG7hrq/5q3QJFpvoqsh7xlbfz9sLJ/0/cByLcA+ZWw/DiQU4a8ytupDgc2t9ZVIPbDOVEbVAXWXI6KQrteVZTxHUZhxXdIsoorXoIIJyv6Y2nRXqE1I6OuHp5zPUlDpPN40XZcIl6sD5VEBT2v35O3Mu+BCbfrfTDwrht4782/BybcrDeEqR44i+QQLyR1cz0N4c+1Ub4kCzEjTuC/0TYB/s8U3VP9P3vYn4w/LJy4ZrbMPj9rubVANh/5BxNQS914+XzfFRdAL3uCl87bSN3nFlKEetP/lEVZH4zekO/GpPAlSCA4WZ5D4VHG/HEDS4sEIZd9qQs3CCM61oEx2lxj1W4psZgCF6OiANtrW0pdXEwCMzH6+kGPssKP6Hf1sDbiiyL2eR5YtnPJ6AvM22RrtxfbbBlevxil53/rWLHDYBJD6K9Lm7dHXabhc6OuuUv12f9FDMYlKFsGlx5l3k5dCOVssQbh+kyMuClTQpWSHt9hwn1hR1378gXhK5875+sWvMaSE2x4k7dTsDSqcdFmAlbcSRprYycGVhLLNZ2EmlBI8rmUenNisESVUrdAOgZaa9Eh6kaJOtlu5Qf1fY0pda+xr+YQR7UTv2LfXB/pEgsuD8W1s/eBfjfoYVHsZpfNiJcQlkQiDYuRnsmmYLUzBaTP5CmL6yx8CiMrpUFEdeR1BFQEpeGDhaYHq9jRWhv85POm4dth6p1Iof881ipDQMNrfAPNFP52aHwJLxTlbpL3JRMPaQq21sp28Y8lTs6OdwUN07En3PAKKJQnYki0q+kMtHyvEvbgrAdn/fLOus05d3Ogh+n/FWflYfrv3PSHgCDq7SOCRevvHwcJC6f1hBvqQ8afxE2RbQDBxvHqL91y2VFvUoxWxiu1I223O/SBGzJFH+igKr3oiaPaERs7S7oairKkbDfwFZmJ0ZcowPgwKd1nhGueM76xhcR8tLFjieHqI4Zo/rYjP7e/XT77I3/6Iv/90blFfNLVnfNpfH4G3pl3QeQeAAA="
    },
    "Metadata": {
     "aws:cdk:path": "MaintenanceTrackerStack/CDKMetadata/Default"
@@ -2375,17 +2303,9 @@
   },
   "PortalUrl": {
    "Value": {
-    "Fn::Join": [
-     "",
-     [
-      "https://",
-      {
-       "Fn::GetAtt": [
-        "PortalDistribution104A9AF0",
-        "DomainName"
-       ]
-      }
-     ]
+    "Fn::GetAtt": [
+     "PortalBucketF34416C0",
+     "WebsiteURL"
     ]
    }
   },
