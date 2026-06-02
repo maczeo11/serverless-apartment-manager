@@ -2069,7 +2069,7 @@
      "cdk-hnb659fds-assets-948645358124-us-east-1"
     ],
     "SourceObjectKeys": [
-     "c8a2412b0788bfb6a0422e00ca538836a3fc4610b28081636c01f6e48ecf38f9.zip"
+     "9006c02822259e4505c6fda7827f64db4275a9b6af3c523b61d64caac5e0cd4a.zip"
     ],
     "DestinationBucketName": {
      "Ref": "PortalBucketF34416C0"
