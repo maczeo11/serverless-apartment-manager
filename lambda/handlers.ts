@@ -173,6 +173,10 @@ export const updateRequestHandler = async (event: any) => {
         if (!admin) return response(403, { error: "Only admins can update status" });
 
         if (body.status) {
+            const allowedStatuses = ["OPEN", "IN_PROGRESS", "ON_HOLD", "RESOLVED", "CLOSED", "CANCELLED"];
+            if (!allowedStatuses.includes(body.status)) {
+                return response(400, { error: "Invalid status" });
+            }
             expr += ", #status = :status";
             vals[":status"] = body.status;
             names["#status"] = "status";

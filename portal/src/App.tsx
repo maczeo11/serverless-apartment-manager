@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { signOut, getCurrentUser, fetchAuthSession } from 'aws-amplify/auth';
+import { signOut, getCurrentUser, fetchAuthSession, fetchUserAttributes } from 'aws-amplify/auth';
 import { Auth } from './components/Auth';
 import { Dashboard } from './components/Dashboard';
 
@@ -17,7 +17,8 @@ export default function App() {
   async function checkUser() {
     try {
       const currentUser = await getCurrentUser();
-      setUser(currentUser);
+      const attributes = await fetchUserAttributes();
+      setUser({ ...currentUser, email: attributes.email });
 
       const session = await fetchAuthSession();
       const groups = session.tokens?.accessToken?.payload?.['cognito:groups'] as string[];

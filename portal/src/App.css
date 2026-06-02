@@ -458,3 +458,37 @@ select.form-input {
   max-width: 300px;
   margin: 0 auto 24px;
 }
+
+/* Status Filter Bar */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  background: var(--panel-bg);
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--panel-border);
+  overflow-x: auto;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.filter-btn.active {
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+}

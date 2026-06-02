@@ -39,8 +39,9 @@ async function request(endpoint: string, options: RequestInit = {}) {
     return response.json();
 }
 
-export async function getRequests(): Promise<{ items: MaintenanceRequest[], nextToken: string | null }> {
-    return request('/requests');
+export async function getRequests(status?: string): Promise<{ items: MaintenanceRequest[], nextToken: string | null }> {
+    const url = status ? `/requests?status=${status}` : '/requests';
+    return request(url);
 }
 
 export async function getRequest(id: string): Promise<MaintenanceRequest> {

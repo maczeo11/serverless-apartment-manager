@@ -15,8 +15,11 @@ import * as eventsTargets from 'aws-cdk-lib/aws-events-targets';
 
 import * as iam from 'aws-cdk-lib/aws-iam';
 
+import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
+import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { Construct } from 'constructs';
+import * as fs from 'fs';
 
 import { join } from 'path';
 
@@ -209,7 +212,7 @@ export class MaintenanceTrackerStack extends cdk.Stack {
       postConfirmFn,
     );
 
-    requestsTable.grantReadWriteData(createRequestFn);
+    requestsTable.grantWriteData(createRequestFn);
 
     requestsTable.grantReadData(getRequestsFn);
 
@@ -221,7 +224,7 @@ export class MaintenanceTrackerStack extends cdk.Stack {
       new iam.PolicyStatement({
         actions: ['cognito-idp:AdminAddUserToGroup'],
 
-        resources: ['*'],
+        resources: [userPool.userPoolArn],
       }),
     );
 
@@ -289,30 +292,57 @@ export class MaintenanceTrackerStack extends cdk.Stack {
       authOpts,
     );
 
-    // S3
     const portalBucket = new s3.Bucket(this, 'PortalBucket', {
-      publicReadAccess: true,
-
-      blockPublicAccess: new s3.BlockPublicAccess({
-        blockPublicAcls: false,
-        ignorePublicAcls: false,
-        blockPublicPolicy: false,
-        restrictPublicBuckets: false,
-      }),
-
-      websiteIndexDocument: 'index.html',
-
-      websiteErrorDocument: 'index.html',
-
+      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
-
       autoDeleteObjects: true,
     });
 
-    new s3deploy.BucketDeployment(this, 'PortalDeploy', {
-      sources: [s3deploy.Source.asset(join(__dirname, '../portal/dist'))],
+    const distribution = new cloudfront.Distribution(this, 'PortalDistribution', {
+      defaultBehavior: {
+        origin: new origins.S3Origin(portalBucket),
+        viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+      },
+      defaultRootObject: 'index.html',
+      errorResponses: [
+        {
+          httpStatus: 403,
+          responseHttpStatus: 200,
+          responsePagePath: '/index.html',
+        },
+        {
+          httpStatus: 404,
+          responseHttpStatus: 200,
+          responsePagePath: '/index.html',
+        }
+      ]
+    });
 
+    new s3deploy.BucketDeployment(this, 'PortalDeploy', {
+      sources: [
+        s3deploy.Source.asset(join(__dirname, '../portal'), {
+          bundling: {
+            image: cdk.DockerImage.fromRegistry('node:22'),
+            local: {
+              tryBundle(outputDir: string) {
+                try {
+                  const portalDir = join(__dirname, '../portal');
+                  const { execSync } = require('child_process');
+                  execSync('npm install', { cwd: portalDir, stdio: 'ignore' });
+                  execSync('npm run build', { cwd: portalDir, stdio: 'ignore' });
+                  fs.cpSync(join(portalDir, 'dist'), outputDir, { recursive: true });
+                  return true;
+                } catch (e) {
+                  return false;
+                }
+              }
+            }
+          }
+        })
+      ],
       destinationBucket: portalBucket,
+      distribution,
+      distributionPaths: ['/*'],
     });
 
     // Assign public properties
@@ -327,7 +357,7 @@ export class MaintenanceTrackerStack extends cdk.Stack {
     });
 
     new cdk.CfnOutput(this, 'PortalUrl', {
-      value: portalBucket.bucketWebsiteUrl,
+      value: `https://${distribution.domainName}`,
     });
 
     new cdk.CfnOutput(this, 'UserPoolId', {

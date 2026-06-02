@@ -94,7 +94,7 @@
     {
       "type": "aws:cdk:creationStack",
       "data": [
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:124:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:127:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -108,7 +108,7 @@
     {
       "type": "aws:cdk:creationStack",
       "data": [
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:130:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:133:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -321,10 +321,7 @@
     {
       "type": "aws:cdk:analytics:construct",
       "data": {
-        "publicReadAccess": true,
         "blockPublicAccess": "*",
-        "websiteIndexDocument": "*",
-        "websiteErrorDocument": "*",
         "removalPolicy": "destroy",
         "autoDeleteObjects": true
       }
@@ -334,6 +331,30 @@
     {
       "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
       "data": true
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalDistribution": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {
+        "defaultBehavior": {
+          "origin": "*",
+          "viewerProtocolPolicy": "redirect-to-https"
+        },
+        "defaultRootObject": "*",
+        "errorResponses": [
+          {
+            "httpStatus": "*",
+            "responseHttpStatus": "*",
+            "responsePagePath": "*"
+          },
+          {
+            "httpStatus": "*",
+            "responseHttpStatus": "*",
+            "responsePagePath": "*"
+          }
+        ]
+      }
     }
   ],
   "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C": [
@@ -392,7 +413,7 @@
     {
       "type": "aws:cdk:creationStack",
       "data": [
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:325:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:355:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -406,7 +427,7 @@
     {
       "type": "aws:cdk:creationStack",
       "data": [
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:329:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:359:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -420,7 +441,7 @@
     {
       "type": "aws:cdk:creationStack",
       "data": [
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:333:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:363:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -434,7 +455,7 @@
     {
       "type": "aws:cdk:creationStack",
       "data": [
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:337:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:367:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -475,7 +496,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Topic2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:49:28)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:52:28)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -503,7 +524,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Table2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:58:27)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:61:27)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -524,7 +545,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new UserPool2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:109:22)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:112:22)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -539,7 +560,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.<anonymous> in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:206:14)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:209:14)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -554,7 +575,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new UserPoolClient2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:136:28)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:139:28)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -598,14 +619,6 @@
           "*"
         ]
       }
-    },
-    {
-      "type": "aws:cdk:analytics:method",
-      "data": {
-        "addToPrincipalPolicy": [
-          {}
-        ]
-      }
     }
   ],
   "/MaintenanceTrackerStack/CreateFn/Resource": [
@@ -617,7 +630,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:159:29)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:162:29)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -688,7 +701,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:167:27)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:170:27)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -759,7 +772,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:175:29)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:178:29)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -838,7 +851,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:183:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:186:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -901,7 +914,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:198:27)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:201:27)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -924,7 +937,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Rule2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:229:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:232:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -939,7 +952,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Rule2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:229:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:232:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -954,7 +967,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new RestApi2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:236:17)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:239:17)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1139,7 +1152,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new RestApi2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:236:17)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:239:17)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1160,7 +1173,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new CognitoUserPoolsAuthorizer2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:244:18)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:247:18)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1175,7 +1188,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Bucket2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:293:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:295:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1210,7 +1223,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Bucket2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:293:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:295:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1225,7 +1238,22 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Bucket2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:293:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:295:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalDistribution/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PortalDistribution104A9AF0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Distribution2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:301:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1332,6 +1360,14 @@
           {}
         ]
       }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addToPrincipalPolicy": [
+          {}
+        ]
+      }
     }
   ],
   "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
@@ -1343,7 +1379,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new BucketDeployment2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:312:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:321:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1379,7 +1415,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addSubscription in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:53:20)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:56:20)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1394,7 +1430,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:159:29)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:162:29)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1428,14 +1464,6 @@
           {}
         ]
       }
-    },
-    {
-      "type": "aws:cdk:analytics:method",
-      "data": {
-        "addStatements": [
-          {}
-        ]
-      }
     }
   ],
   "/MaintenanceTrackerStack/CreateFn/Code/AssetBucket": [
@@ -1453,7 +1481,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:159:29)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:162:29)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1468,7 +1496,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:167:27)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:170:27)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1527,7 +1555,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:167:27)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:170:27)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1542,7 +1570,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:175:29)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:178:29)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1601,7 +1629,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:175:29)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:178:29)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1616,7 +1644,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:183:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:186:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1683,7 +1711,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:183:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:186:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1698,7 +1726,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:198:27)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:201:27)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1749,7 +1777,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new NodejsFunction in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:198:27)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:201:27)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1764,7 +1792,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new RestApi2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:236:17)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:239:17)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1779,7 +1807,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new RestApi2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:236:17)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:239:17)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1838,7 +1866,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Bucket2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:293:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:295:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1859,10 +1887,16 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Bucket2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:293:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:295:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
+    }
+  ],
+  "/MaintenanceTrackerStack/PortalDistribution/Origin1/S3Origin": [
+    {
+      "type": "aws:cdk:analytics:construct",
+      "data": {}
     }
   ],
   "/MaintenanceTrackerStack/PortalDeploy/AwsCliLayer/Resource": [
@@ -1874,7 +1908,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new BucketDeployment2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:312:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:321:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1895,7 +1929,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new BucketDeployment2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:312:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:321:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1910,7 +1944,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new BucketDeployment2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:312:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:321:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1952,6 +1986,14 @@
           {}
         ]
       }
+    },
+    {
+      "type": "aws:cdk:analytics:method",
+      "data": {
+        "addStatements": [
+          {}
+        ]
+      }
     }
   ],
   "/MaintenanceTrackerStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/AssetBucket": [
@@ -1969,7 +2011,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new BucketDeployment2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:312:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:321:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1983,8 +2025,8 @@
     {
       "type": "aws:cdk:creationStack",
       "data": [
-        "...WrappedClass.grantReadWriteData in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:212:19)",
+        "...WrappedClass.grantWriteData in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:215:19)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -1999,7 +2041,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.grantReadData in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:214:19)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:217:19)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2014,7 +2056,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.grantReadWriteData in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:216:19)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:219:19)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2029,7 +2071,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.grantPublish in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:196:20)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:199:20)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2044,7 +2086,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...NodejsFunction.addToRolePolicy in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:220:19)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:223:19)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2059,7 +2101,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new RestApi2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:236:17)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:239:17)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2074,7 +2116,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...RootResource.addResource in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:254:30)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:257:30)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2124,6 +2166,21 @@
       }
     }
   ],
+  "/MaintenanceTrackerStack/PortalDistribution/Origin1/S3Origin/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "PortalDistributionOrigin1S3Origin0D94F3EC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Distribution2 in aws-cdk-lib...",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:301:26)",
+        "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    }
+  ],
   "/MaintenanceTrackerStack/PortalDeploy/AwsCliLayer/Code/AssetBucket": [
     {
       "type": "aws:cdk:analytics:construct",
@@ -2141,7 +2198,7 @@
         "...C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\node_modules\\aws-cdk-lib\\aws-s3-deployment\\lib\\bucket-deployment.js:1:71 in aws-cdk-lib...",
         "Array.map (:)",
         "...new BucketDeployment2 in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:312:5)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:321:5)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2156,7 +2213,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...RootResource.addResource in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:254:30)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:257:30)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2171,7 +2228,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addResource in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:256:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:259:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2258,7 +2315,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addResource in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:256:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:259:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2273,7 +2330,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:258:10)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:261:10)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2288,7 +2345,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:258:10)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:261:10)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2303,7 +2360,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:258:10)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:261:10)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2318,7 +2375,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:264:10)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:267:10)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2333,7 +2390,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:264:10)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:267:10)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2348,7 +2405,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:264:10)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:267:10)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2363,7 +2420,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addResource in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:270:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:273:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2450,7 +2507,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addResource in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:270:26)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:273:26)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2465,7 +2522,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:272:13)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:275:13)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2480,7 +2537,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:272:13)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:275:13)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2495,7 +2552,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:272:13)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:275:13)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2510,7 +2567,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:278:13)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:281:13)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2525,7 +2582,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:278:13)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:281:13)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2540,7 +2597,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:278:13)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:281:13)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2555,7 +2612,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addResource in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:284:33)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:287:33)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2619,7 +2676,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addResource in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:284:33)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:287:33)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2634,7 +2691,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:286:17)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:289:17)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2649,7 +2706,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:286:17)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:289:17)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]
@@ -2664,7 +2721,7 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...WrappedClass.addMethod in aws-cdk-lib...",
-        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:286:17)",
+        "new MaintenanceTrackerStack (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\lib\\aprt_mng-stack.ts:289:17)",
         "<anonymous> (C:\\Users\\bhanu\\mycodes\\aws\\aprt_mng\\bin\\aprt_mng.ts:6:1)",
         "...node internals, ts-node, ts-node, ts-node..."
       ]

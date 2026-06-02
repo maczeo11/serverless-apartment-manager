@@ -15,15 +15,16 @@ export function Dashboard({ user, isAdmin, onSignOut }: DashboardProps) {
   const [requests, setRequests] = useState<MaintenanceRequest[]>([]);
   const [loading, setLoading] = useState(false);
   const [showNewModal, setShowNewModal] = useState(false);
+  const [statusFilter, setStatusFilter] = useState('OPEN');
 
   useEffect(() => {
     loadRequests();
-  }, []);
+  }, [statusFilter]);
 
   async function loadRequests() {
     setLoading(true);
     try {
-      const res = await getRequests();
+      const res = await getRequests(isAdmin ? statusFilter : undefined);
       setRequests(res.items || []);
     } catch (e) {
       console.error(e);
@@ -41,7 +42,7 @@ export function Dashboard({ user, isAdmin, onSignOut }: DashboardProps) {
         </div>
         <div className="user-controls">
           <span className="user-email">
-            {user.username} {isAdmin && <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>(Admin)</span>}
+            {user.email || user.username} {isAdmin && <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>(Admin)</span>}
           </span>
           <button onClick={onSignOut} className="btn-logout">Sign Out</button>
         </div>
@@ -56,6 +57,20 @@ export function Dashboard({ user, isAdmin, onSignOut }: DashboardProps) {
             </button>
           )}
         </div>
+
+        {isAdmin && (
+          <div className="filter-bar">
+            {['OPEN', 'IN_PROGRESS', 'ON_HOLD', 'RESOLVED', 'CLOSED', 'CANCELLED'].map((status) => (
+              <button
+                key={status}
+                className={`filter-btn ${statusFilter === status ? 'active' : ''}`}
+                onClick={() => setStatusFilter(status)}
+              >
+                {status.replace('_', ' ')}
+              </button>
+            ))}
+          </div>
+        )}
 
         {loading ? (
           <div className="loading-state"><div className="spinner" /></div>
