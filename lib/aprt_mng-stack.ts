@@ -224,7 +224,7 @@ export class MaintenanceTrackerStack extends cdk.Stack {
       new iam.PolicyStatement({
         actions: ['cognito-idp:AdminAddUserToGroup'],
 
-        resources: [userPool.userPoolArn],
+        resources: [`arn:aws:cognito-idp:${cdk.Aws.REGION}:${cdk.Aws.ACCOUNT_ID}:userpool/*`],
       }),
     );
 
@@ -300,7 +300,7 @@ export class MaintenanceTrackerStack extends cdk.Stack {
 
     const distribution = new cloudfront.Distribution(this, 'PortalDistribution', {
       defaultBehavior: {
-        origin: new origins.S3Origin(portalBucket),
+        origin: origins.S3BucketOrigin.withOriginAccessControl(portalBucket),
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
       },
       defaultRootObject: 'index.html',
